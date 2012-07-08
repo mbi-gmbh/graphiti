@@ -17,6 +17,7 @@ body.bp {
 @mixin fancy-font {
   font-family: "MentoneSemiBold", Helvetica, Arial;
 }
+h1, h3 { text-align:left; }
 #container {
   @include container;
   margin: 10px auto;
@@ -25,15 +26,21 @@ body.bp {
 #header {
   background: -moz-linear-gradient(center top , #A55E1F 0%, #8C4F24 100%) repeat scroll 0 0 transparent;
   box-shadow: 0 4px 4px #CCCCCC;
-  height: 60px;
+  height: 70px;
   h1 {
     @include fancy-font;
     color: #FFF;
-    padding: 10px;
+    padding: 9px 0;
     margin: 0;
     a {
       text-decoration: none;
       color: #FFF;
+	  float:left;
+    }
+    img#logo {
+        @include border-radius(5px);
+        background-color: #FFFFFF;
+        padding: 9px;
     }
   }
   .menu {
@@ -290,7 +297,7 @@ h2 {
 .desc {
   padding: 5px;
   background: -moz-linear-gradient(center top , #F8F2E9 0%, #E8DDCA 100%) repeat scroll 0 0 transparent;
-  border: 1px solid #B8A48A;
+  border: 1px solid #D8C4AA;
   margin-bottom: 10px;
 }
 #snapshots-pane {
@@ -318,7 +325,7 @@ h2 {
       background: #F8F2E9;
     }
     &:hover {
-      background: #B8A48A;
+      background: #D8CDBA;
     }
     a {
       color: #333;
@@ -339,11 +346,11 @@ h2 {
       top: 20px;
     }
     .updated-at {
-      color: #CCC;
+      color: #E2BF9C;
     }
     .graphs-count {
       @include fancy-font;
-      color: #666;
+      color: #622F0C;
       font-size: 1.8em;
       padding: 0px 8px;
     }
@@ -365,6 +372,7 @@ h2 {
     font-weight: normal;
   }
 }
+body.bp a button { top:0; }
 #dashboards ul.actions {
   padding-right: 20px;
 }

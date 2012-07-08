@@ -3,17 +3,19 @@
   %meta{charset: 'utf-8'}
   %meta{'http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'}/
 
-  %title WINPACCS Status Board
+  %title WINPACCS dashboard
 
   = stylesheet('/stylesheets/screen.css', media: 'screen, projection')
 
-
+  /[if lt IE 10]
+    = stylesheet('/stylesheets/ie.css', media: 'screen, projection')
 
 %body.bp
   #header
     .menu
       %h1
-        %a{href: '/'} WINPACCS Status Board
+        %a{:href => '/', :title => 'WINPACCS dashboard'}
+          %img#logo{:src => '/images/wplogo.png', :alt => 'WINPACCS dashboard'}/
 
       %ul
         %li

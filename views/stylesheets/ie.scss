@@ -12,5 +12,19 @@ body.bp {
   // the correct behavior to your main container (but not the body tag!)
   // Example:
   // .my-container
-  //   text-align: left
+  text-align: left
+}
+
+#header
+{
+    background-color: #975622!important;
+}
+#container ul.actions {
+  input, button{
+    background: #99632C;
+  }
+}
+.desc {
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F8F2E9,endColorstr=#E8DDCA);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#F8F2E9, endColorstr=#E8DDCA)";
 }
