@@ -11,6 +11,8 @@ body.bp {
   @include blueprint-utilities;
   @include blueprint-debug;
   @include blueprint-interaction;
+
+  background-color:#F8F5F0;
 }
 @mixin fancy-font {
   font-family: "MentoneSemiBold", Helvetica, Arial;
@@ -21,7 +23,8 @@ body.bp {
   min-height: 500px;
 }
 #header {
-  background: #001247;
+  background: -moz-linear-gradient(center top , #A55E1F 0%, #8C4F24 100%) repeat scroll 0 0 transparent;
+  box-shadow: 0 4px 4px #CCCCCC;
   height: 60px;
   h1 {
     @include fancy-font;
@@ -48,12 +51,12 @@ body.bp {
         @include border-bottom-radius(5px);
         display:block;
         font-size: 1.3em;
-        background: #00081f;
+        background: #622F0C;
         color: #FFF;
         padding: 10px 20px 5px;
         text-decoration: none;
         &:hover {
-          background: #4b4b4b;
+          background: #723F1C;
         }
       }
     }
@@ -286,7 +289,8 @@ h2 {
 }
 .desc {
   padding: 5px;
-  background: #f3f3f3;
+  background: -moz-linear-gradient(center top , #F8F2E9 0%, #E8DDCA 100%) repeat scroll 0 0 transparent;
+  border: 1px solid #B8A48A;
   margin-bottom: 10px;
 }
 #snapshots-pane {
@@ -308,13 +312,13 @@ h2 {
   .dashboard {
     @include column($blueprint-grid-columns, true);
     border-bottom: 1px solid #CCC;
-    background: #f3f3f3;
+    background: #E8DDCA;
     position: relative;
     &.alt {
-      background: #FEFEFE;
+      background: #F8F2E9;
     }
     &:hover {
-      background: #E3E3E3;
+      background: #B8A48A;
     }
     a {
       color: #333;
@@ -352,13 +356,13 @@ h2 {
   padding: 4px;
   input, button{
     @include border-radius(4px);
-    color: #666;
-    background: #e5e5e5;
-    cursor: pointer;
-    padding: 2px 4px;
-    border: 1px solid #CCC;
+	background: -moz-linear-gradient(center top , #DD8A2D 0%, #9B5D26 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #76411C;
+    color: #FFFFFF;
+    padding: 0.2em 0.5em;
+	cursor: pointer;
     font-size: 10px;
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 #dashboards ul.actions {
