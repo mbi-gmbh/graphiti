@@ -24,7 +24,16 @@ h1, h3 { text-align:left; }
   min-height: 500px;
 }
 #header {
-  background: -moz-linear-gradient(center top , #A55E1F 0%, #8C4F24 100%) repeat scroll 0 0 transparent;
+  /* For Internet Explorer 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#A55E1F, endColorstr=#8C4F24);
+  /* For Internet Explorer 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#A55E1F, endColorstr=#8C4F24)";
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#A55E1F), color-stop(100%,#8C4F24));
+  background: -webkit-linear-gradient(top, #A55E1F 0%, #8C4F24 100%); 
+  background: -moz-linear-gradient(top, #A55E1F 0%, #8C4F24 100%); 
+  background: -ms-linear-gradient(top, #A55E1F 0%, #8C4F24 100%); 
+  background: -o-linear-gradient(top, #A55E1F 0%, #8C4F24 100%);     
+  background: linear-gradient(top, #A55E1F 0%, #8C4F24 100%);
   box-shadow: 0 4px 4px #CCCCCC;
   height: 70px;
   h1 {
@@ -296,9 +305,18 @@ h2 {
 }
 .desc {
   padding: 5px;
-  background: -moz-linear-gradient(center top , #F8F2E9 0%, #E8DDCA 100%) repeat scroll 0 0 transparent;
   border: 1px solid #D8C4AA;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
+  /* For Internet Explorer 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F8F2E9, endColorstr=#E8DDCA);
+  /* For Internet Explorer 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F8F2E9, endColorstr=#E8DDCA)";
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#F8F2E9), color-stop(100%,#E8DDCA));
+  background: -webkit-linear-gradient(top, #F8F2E9 0%, #E8DDCA 100%); 
+  background: -moz-linear-gradient(top, #F8F2E9 0%, #E8DDCA 100%); 
+  background: -ms-linear-gradient(top, #F8F2E9 0%, #E8DDCA 100%); 
+  background: -o-linear-gradient(top, #F8F2E9 0%, #E8DDCA 100%);     
+  background: linear-gradient(top, #F8F2E9 0%, #E8DDCA 100%);
 }
 #snapshots-pane {
   .snapshot {
@@ -363,7 +381,16 @@ h2 {
   padding: 4px;
   input, button{
     @include border-radius(4px);
-	background: -moz-linear-gradient(center top , #DD8A2D 0%, #9B5D26 100%) repeat scroll 0 0 transparent;
+  /* For Internet Explorer 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#DD8A2D, endColorstr=#9B5D26);
+  /* For Internet Explorer 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DD8A2D, endColorstr=#9B5D26)";
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#DD8A2D), color-stop(100%,#9B5D26));
+  background: -webkit-linear-gradient(top, #DD8A2D 0%, #9B5D26 100%); 
+  background: -moz-linear-gradient(top, #DD8A2D 0%, #9B5D26 100%); 
+  background: -ms-linear-gradient(top, #DD8A2D 0%, #9B5D26 100%); 
+  background: -o-linear-gradient(top, #DD8A2D 0%, #9B5D26 100%);     
+  background: linear-gradient(top, #DD8A2D 0%, #9B5D26 100%);
     border: 1px solid #76411C;
     color: #FFFFFF;
     padding: 0.2em 0.5em;
