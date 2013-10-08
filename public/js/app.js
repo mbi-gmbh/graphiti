@@ -237,7 +237,10 @@ var app = Sammy('body', function() {
             } else {
               all_graphs = true;
             }
-            $graphs.append('<h2>' + title + '</h2>');
+            $graphs.append('<h2>' + title + '</h2>')
+              .find('h2').editable('/dashboard/' + data.slug, { 
+                name: 'title'
+              });
             var graphs = data.graphs,
                 i = 0,
                 l = graphs.length,

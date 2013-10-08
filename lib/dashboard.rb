@@ -16,6 +16,14 @@ class Dashboard
     json
   end
 
+  def self.rename(slug, title)
+    dashboard = find(slug, false)
+    if dashboard
+      key = "dashboards:#{slug}"
+      redis.hset key, "title", title
+    end
+  end
+
   def self.find(slug, with_graphs = false)
     dash = redis.hgetall "dashboards:#{slug}"
     return nil if !dash || dash.empty?

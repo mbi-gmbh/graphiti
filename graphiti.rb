@@ -99,6 +99,11 @@ class Graphiti < Sinatra::Base
     json :dashboard => dashboard
   end
 
+  post '/dashboard/:slug' do
+    Dashboard.rename(params[:slug], params[:title])
+    params[:title]
+  end
+
   post '/graphs/dashboards' do
     json Dashboard.add_graph(params[:dashboard], params[:uuid])
   end
@@ -145,7 +150,7 @@ class Graphiti < Sinatra::Base
   def default_graph
     {
       :options => settings.default_options,
-      :targets => settings.default_metrics.collect {|m| [m, {}] }
+      :targets => settings.default_metrics.nil? ? Array.new(0) : settings.default_metrics.collect {|m| [m, {}] }
     }
   end
 
